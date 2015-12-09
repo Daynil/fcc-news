@@ -1,0 +1,12 @@
+#container {
+  padding: 10px;
+  transition: 0.2s; }
+  #container:hover {
+    background-color: #cccccc;
+    cursor: pointer; }
+  #container #title {
+    display: block;
+    font: normal 20px "Open Sans";
+    margin: 0; }
+
+/*# sourceMappingURL=fcc-article.css.map */

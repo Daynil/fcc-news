@@ -1,0 +1,39 @@
+#page-wrapper {
+  height: 100vh;
+  width: 100%;
+  margin-bottom: -68px;
+  background-color: #457f87;
+  font: normal 30px "Open Sans";
+  color: aliceblue;
+  text-align: center; }
+  #page-wrapper #header {
+    line-height: 18px;
+    padding-top: 1px; }
+  #page-wrapper #article-list {
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 90%;
+    padding: 20px;
+    background-color: #ededed;
+    color: #22611f; }
+
+#foot {
+  font: normal 20px "Open Sans";
+  color: aliceblue;
+  line-height: 31px;
+  width: 100%;
+  height: 65px;
+  padding-top: 3px;
+  text-align: center;
+  background-color: #48290f; }
+  #foot i, #foot a {
+    color: #54a9ab;
+    transition: 0.2s;
+    text-decoration: none; }
+  #foot a:hover, #foot #gh-link:hover i {
+    color: aliceblue;
+    text-decoration: none; }
+  #foot i {
+    padding-left: 2px; }
+
+/*# sourceMappingURL=fcc-news.css.map */

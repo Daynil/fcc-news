@@ -1,0 +1,27 @@
+$color-background: hsl(187, 32%, 40%);
+$color-background-light: hsl(181, 34%, 50%);
+$color-background-text: hsl(0, 0%, 93%);
+$color-background-text-hover: hsl(0, 0%, 80%);
+$color-brown: hsl(28, 66%, 17%);
+$color-green: hsl(117, 52%, 25%);
+$color-green-light: hsl(117, 65%, 35%);
+
+$font-main: normal 30px 'Open Sans';
+$font-sub:  normal 20px 'Open Sans';
+$font-small: normal 15px 'Open Sans';
+
+#container {
+	padding: 10px;
+	transition: 0.2s;
+	
+	&:hover {
+		background-color: $color-background-text-hover;
+		cursor: pointer;
+	}
+	
+	#title {
+		display: block;
+		font: $font-sub;
+		margin: 0;
+	}
+}

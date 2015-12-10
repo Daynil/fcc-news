@@ -13,26 +13,22 @@ export class Article {
 
 @Injectable()
 export class ArticleService {
-	apiEndpoint: string = 'http://www.freecodecamp.com/news/hot';
-	articles: Article[];
+	apiEndpoint = 'http://www.freecodecamp.com/news/hot';
+	articles: Article[] = [];
 	
 	constructor( public http: Http ) {
 		this.initialGet();
 	}
 	
 	getArticles(): Observable<any> {
-		let result = this.http.get( this.apiEndpoint );
-		console.log(result);
-		return result.map(res => res.json());
-
+		return this.http.get(this.apiEndpoint).map(res => res.json());
 	}
 	
 	initialGet() {
 		this.getArticles()
 			.subscribe(
-				resultObj => {
-					let results = resultObj[0];
-					results.map(
+				resultArr => {
+					resultArr.map(
 						resArticle => {
 							let article = new Article(resArticle.headline, resArticle.timePosted, resArticle.link);
 							article.description = resArticle.metaDescription;

@@ -1,4 +1,4 @@
-import {Component, View, CORE_DIRECTIVES} from 'angular2/angular2';
+import { Component, View, CORE_DIRECTIVES } from 'angular2/angular2';
 import { Article } from './article-service';
 
 @Component({
@@ -15,6 +15,7 @@ export class ArticleComp {
 	width;
 	
 	constructor() {
+		console.log(this.article);
 		if (this.article.storyImageUrl) this.imageUrl = this.article.storyImageUrl;
 		else this.imageUrl = this.article.author.userImage;
 		this.setWidth(this.imageUrl);

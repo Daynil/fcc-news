@@ -15,14 +15,14 @@ import { Article, ArticleService } from './article-service';
 })
 // Component controller
 class BaseComponent {
-	
+	articles: Article[];
 	constructor( public articleService: ArticleService ) {
-		
+		this.articles = this.articleService.articles;
 	}
 }
 
 bootstrap(BaseComponent, [HTTP_PROVIDERS])
 	.then(
-		success => console.log("bootstrapping: " + success),
-		error => console.log("bootstrapping: " + error)
+		success => console.log("bootstrapping success: ", success),
+		error => console.log("bootstrapping error: ",  error)
 	);

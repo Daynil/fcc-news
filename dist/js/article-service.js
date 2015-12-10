@@ -22,19 +22,17 @@ var ArticleService = (function () {
     function ArticleService(http) {
         this.http = http;
         this.apiEndpoint = 'http://www.freecodecamp.com/news/hot';
+        this.articles = [];
         this.initialGet();
     }
     ArticleService.prototype.getArticles = function () {
-        var result = this.http.get(this.apiEndpoint);
-        console.log(result);
-        return result.map(function (res) { return res.json(); });
+        return this.http.get(this.apiEndpoint).map(function (res) { return res.json(); });
     };
     ArticleService.prototype.initialGet = function () {
         var _this = this;
         this.getArticles()
-            .subscribe(function (resultObj) {
-            var results = resultObj[0];
-            results.map(function (resArticle) {
+            .subscribe(function (resultArr) {
+            resultArr.map(function (resArticle) {
                 var article = new Article(resArticle.headline, resArticle.timePosted, resArticle.link);
                 article.description = resArticle.metaDescription;
                 article.upvotes = resArticle.rank;

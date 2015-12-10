@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var angular2_1 = require('angular2/angular2');
 var ArticleComp = (function () {
     function ArticleComp() {
+        console.log(this.article);
         if (this.article.storyImageUrl)
             this.imageUrl = this.article.storyImageUrl;
         else

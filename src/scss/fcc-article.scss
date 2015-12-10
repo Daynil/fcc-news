@@ -11,6 +11,8 @@ $font-sub:  normal 20px 'Open Sans';
 $font-small: normal 15px 'Open Sans';
 
 #container {
+	border: 1px dotted $color-green;
+	border-radius: 5px;
 	padding: 10px;
 	transition: 0.2s;
 	

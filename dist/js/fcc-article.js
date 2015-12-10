@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var angular2_1 = require('angular2/angular2');
 var ArticleComp = (function () {
     function ArticleComp() {
-        this.image = 'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1446102038/GpamtF4_x17rnq.png';
-        this.title = 'Article Title Goes Here and Describes Article';
-        this.setWidth(this.image);
+        if (this.article.storyImageUrl)
+            this.imageUrl = this.article.storyImageUrl;
+        else
+            this.imageUrl = this.article.author.userImage;
+        this.setWidth(this.imageUrl);
     }
     ArticleComp.prototype.setWidth = function (url) {
         var _this = this;
@@ -23,7 +25,8 @@ var ArticleComp = (function () {
     };
     ArticleComp = __decorate([
         angular2_1.Component({
-            selector: 'fcc-article'
+            selector: 'fcc-article',
+            inputs: ['article']
         }),
         angular2_1.View({
             templateUrl: '../html/fcc-article.html',

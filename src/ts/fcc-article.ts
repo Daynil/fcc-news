@@ -1,19 +1,23 @@
 import {Component, View, CORE_DIRECTIVES} from 'angular2/angular2';
+import { Article } from './article-service';
 
 @Component({
-	selector: 'fcc-article'
+	selector: 'fcc-article',
+	inputs: ['article']
 })
 @View({
 	templateUrl: '../html/fcc-article.html',
 	styleUrls: ['../css/fcc-article.css']
 })
 export class ArticleComp {
-	image: string = 'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1446102038/GpamtF4_x17rnq.png';
-	title: string = 'Article Title Goes Here and Describes Article';
+	article: Article;
+	imageUrl: string;
 	width;
 	
 	constructor() {
-		this.setWidth(this.image);
+		if (this.article.storyImageUrl) this.imageUrl = this.article.storyImageUrl;
+		else this.imageUrl = this.article.author.userImage;
+		this.setWidth(this.imageUrl);
 	}
 	
 	setWidth(url: string) {

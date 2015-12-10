@@ -1,4 +1,6 @@
 #container {
+  border: 1px dotted #22611f;
+  border-radius: 5px;
   padding: 10px;
   transition: 0.2s; }
   #container:hover {

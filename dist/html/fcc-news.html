@@ -5,7 +5,10 @@
 	</div>
 	
 	<div id="article-list">
-		<fcc-article></fcc-article>
+		<fcc-article
+			*ng-for="#article of articleService.articles"
+			[article]="article">
+		</fcc-article>
 	</div>
 	
 </div>

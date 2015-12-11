@@ -32,7 +32,7 @@
     margin-top: 5px;
     font-size: 15px; }
     #container #upvotes-info #upvotes i {
-      color: #457f87;
+      color: #25931f;
       margin-right: 3px; }
     #container #upvotes-info #poster a {
       color: #22611f;
@@ -40,6 +40,7 @@
       transition: 0.1s; }
     #container #upvotes-info #info {
       color: #457f87;
-      font-size: 22px; }
+      font-size: 22px;
+      cursor: help; }
 
 /*# sourceMappingURL=fcc-article.css.map */

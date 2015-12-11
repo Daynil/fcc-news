@@ -55,7 +55,7 @@ $font-small: normal 15px 'Open Sans';
 		font-size: 15px;
 		
 		#upvotes i {
-			color: $color-background;
+			color: $color-green-light;
 			margin-right: 3px;
 		}
 		
@@ -73,6 +73,7 @@ $font-small: normal 15px 'Open Sans';
 		#info {
 			color: $color-background;
 			font-size: 22px;
+			cursor: help;
 		}
 	}
 }

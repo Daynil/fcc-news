@@ -1,7 +1,7 @@
 $color-background: hsl(187, 32%, 40%);
 $color-background-light: hsl(181, 34%, 50%);
 $color-background-text: hsl(0, 0%, 93%);
-$color-background-text-hover: hsl(0, 0%, 80%);
+$color-background-text-hover: hsl(0, 0%, 88%);
 $color-brown: hsl(28, 66%, 17%);
 $color-green: hsl(117, 52%, 25%);
 $color-green-light: hsl(117, 65%, 35%);
@@ -10,20 +10,69 @@ $font-main: normal 30px 'Open Sans';
 $font-sub:  normal 20px 'Open Sans';
 $font-small: normal 15px 'Open Sans';
 
+.divider {
+	width: 100%;
+	height: 1px;
+	background-color: $color-green;
+	margin: 5px 0 5px 0;
+}
+
+.link {
+	color: $color-green-light;
+	cursor: pointer;
+	text-decoration: none;
+}
+
 #container {
+	vertical-align: top;
 	border: 1px dotted $color-green;
 	border-radius: 5px;
 	padding: 10px;
+	margin: 10px 0 10px 0;
 	transition: 0.2s;
-	
 	&:hover {
 		background-color: $color-background-text-hover;
-		cursor: pointer;
 	}
-	
+
 	#title {
 		display: block;
 		font: $font-sub;
 		margin: 0;
+		a {
+			color: $color-green;
+			text-decoration: none;
+			transition: 0.1s;
+			&:hover {
+				@extend .link;
+			}
+		}
+	}
+	
+	#upvotes-info {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 5px;
+		font-size: 15px;
+		
+		#upvotes i {
+			color: $color-background;
+			margin-right: 3px;
+		}
+		
+		#poster {
+			a {
+				color: $color-green;
+				text-decoration: none;
+				transition: 0.1s;
+				&:hover {
+					@extend .link;
+				}
+			}
+		}
+		
+		#info {
+			color: $color-background;
+			font-size: 22px;
+		}
 	}
 }

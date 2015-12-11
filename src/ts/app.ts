@@ -15,9 +15,17 @@ import { Article, ArticleService } from './article-service';
 })
 // Component controller
 class BaseComponent {
-	articles: Article[];
+
 	constructor( public articleService: ArticleService ) {
-		this.articles = this.articleService.articles;
+
+	}
+	
+	sortNews(sortby) {
+		this.articleService.sortNews(sortby.value);
+	}
+	
+	debug(article: Article) {
+		console.log(article);
 	}
 }
 

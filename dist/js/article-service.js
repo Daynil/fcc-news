@@ -8,6 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var http_1 = require('angular2/http');
+var angular2_1 = require('angular2/angular2');
 var core_1 = require('angular2/core');
 var Article = (function () {
     function Article(headline, timePosted, link) {
@@ -23,6 +24,7 @@ var ArticleService = (function () {
         this.http = http;
         this.apiEndpoint = 'http://www.freecodecamp.com/news/hot';
         this.articles = [];
+        this.MAX_IMAGE_WID = 240;
         this.initialGet();
     }
     ArticleService.prototype.getArticles = function () {
@@ -36,12 +38,60 @@ var ArticleService = (function () {
                 var article = new Article(resArticle.headline, resArticle.timePosted, resArticle.link);
                 article.description = resArticle.metaDescription;
                 article.upvotes = resArticle.rank;
+                article.author = { userName: resArticle.author.username, userImage: resArticle.author.picture };
                 if (resArticle.image)
                     article.storyImageUrl = resArticle.image;
-                article.author = { userName: resArticle.author.username, userImage: resArticle.author.picture };
-                _this.articles.push(article);
+                else
+                    article.storyImageUrl = article.author.userImage;
+                _this.getWidth(article.storyImageUrl)
+                    .subscribe(function (width) {
+                    if (width > _this.MAX_IMAGE_WID)
+                        article.width = _this.MAX_IMAGE_WID;
+                    else
+                        article.width = width;
+                    _this.articles.push(article);
+                });
             });
         });
+    };
+    ArticleService.prototype.getWidth = function (url) {
+        return new angular2_1.Observable(function (observer) {
+            var img = new Image();
+            img.src = url;
+            img.onload = function () {
+                observer.next(img.width);
+            };
+        });
+    };
+    ArticleService.prototype.sortNews = function (sortby) {
+        switch (sortby) {
+            case 'date':
+                this.articles.sort(this.sortByDate);
+                break;
+            case 'upvotes':
+                this.articles.sort(this.sortByUpvotes);
+                break;
+            case 'poster':
+                this.articles.sort(this.sortByPoster);
+                break;
+            default:
+                break;
+        }
+    };
+    ArticleService.prototype.sortByDate = function (a, b) {
+        return b.timePosted - a.timePosted;
+    };
+    ArticleService.prototype.sortByUpvotes = function (a, b) {
+        return b.upvotes - a.upvotes;
+    };
+    ArticleService.prototype.sortByPoster = function (a, b) {
+        var aPoster = a.author.userName;
+        var bPoster = b.author.userName;
+        if (aPoster < bPoster)
+            return -1;
+        if (aPoster > bPoster)
+            return 1;
+        return 0;
     };
     ArticleService = __decorate([
         core_1.Injectable(), 

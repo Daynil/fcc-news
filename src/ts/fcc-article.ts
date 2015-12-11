@@ -11,20 +11,10 @@ import { Article } from './article-service';
 })
 export class ArticleComp {
 	article: Article;
-	imageUrl: string;
-	width;
 	
-	constructor() {
-		console.log(this.article);
-		if (this.article.storyImageUrl) this.imageUrl = this.article.storyImageUrl;
-		else this.imageUrl = this.article.author.userImage;
-		this.setWidth(this.imageUrl);
-	}
+	constructor() { }
 	
-	setWidth(url: string) {
-		let width: number;
-		let img = new Image();
-		img.src = url;
-		img.onload = () => this.width = img.width;
+	getAuthorLink(): string {
+		return `http://www.freecodecamp.com/${this.article.author.userName}`
 	}
 }

@@ -10,19 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var angular2_1 = require('angular2/angular2');
 var ArticleComp = (function () {
     function ArticleComp() {
-        console.log(this.article);
-        if (this.article.storyImageUrl)
-            this.imageUrl = this.article.storyImageUrl;
-        else
-            this.imageUrl = this.article.author.userImage;
-        this.setWidth(this.imageUrl);
     }
-    ArticleComp.prototype.setWidth = function (url) {
-        var _this = this;
-        var width;
-        var img = new Image();
-        img.src = url;
-        img.onload = function () { return _this.width = img.width; };
+    ArticleComp.prototype.getAuthorLink = function () {
+        return "http://www.freecodecamp.com/" + this.article.author.userName;
     };
     ArticleComp = __decorate([
         angular2_1.Component({

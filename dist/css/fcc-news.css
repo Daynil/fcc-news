@@ -1,7 +1,7 @@
 #page-wrapper {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  margin-bottom: -68px;
+  padding-bottom: 20px;
   background-color: #457f87;
   font: normal 30px "Open Sans";
   color: aliceblue;
@@ -9,8 +9,28 @@
   #page-wrapper #header {
     line-height: 18px;
     padding-top: 1px; }
+  #page-wrapper #sortby {
+    font: normal 20px "Open Sans";
+    width: 210px;
+    float: right;
+    padding-right: 5%; }
+    #page-wrapper #sortby p {
+      display: inline-block; }
+    #page-wrapper #sortby select {
+      background-color: #457f87;
+      color: aliceblue;
+      border: 1px solid aliceblue;
+      border-radius: 5px;
+      padding: 3px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-left: 5px; }
   #page-wrapper #article-list {
     margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
     border-radius: 10px;
     width: 90%;
     padding: 20px;

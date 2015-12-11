@@ -1,4 +1,10 @@
-<div id="container" [style.width]="width">
-	<img [src]="imageUrl">
-	<p id="title">{{ article.headline }}</p>
+<div id="container" [style.width]="article.width">
+	<img [src]="article.storyImageUrl" [style.width]="article.width">
+	<p id="title"><a [href]="article.link">{{ article.headline }}</a></p>
+	<div class="divider"></div>
+	<div id="upvotes-info">
+		<div id="upvotes"><i class="fa fa-heart"></i>{{ article.upvotes }}</div>
+		<div id="poster"><a [href]="getAuthorLink()">@{{ article.author.userName }}</a></div>
+		<div id="info"><i class="fa fa-info-circle" [title]="article.description"></i></div>
+	</div>
 </div>

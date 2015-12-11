@@ -1,14 +1,45 @@
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #22611f;
+  margin: 5px 0 5px 0; }
+
+.link, #container #title a:hover, #container #upvotes-info #poster a:hover {
+  color: #25931f;
+  cursor: pointer;
+  text-decoration: none; }
+
 #container {
+  vertical-align: top;
   border: 1px dotted #22611f;
   border-radius: 5px;
   padding: 10px;
+  margin: 10px 0 10px 0;
   transition: 0.2s; }
   #container:hover {
-    background-color: #cccccc;
-    cursor: pointer; }
+    background-color: #e0e0e0; }
   #container #title {
     display: block;
     font: normal 20px "Open Sans";
     margin: 0; }
+    #container #title a {
+      color: #22611f;
+      text-decoration: none;
+      transition: 0.1s; }
+  #container #upvotes-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 15px; }
+    #container #upvotes-info #upvotes i {
+      color: #457f87;
+      margin-right: 3px; }
+    #container #upvotes-info #poster a {
+      color: #22611f;
+      text-decoration: none;
+      transition: 0.1s; }
+    #container #upvotes-info #info {
+      color: #457f87;
+      font-size: 22px; }
 
 /*# sourceMappingURL=fcc-article.css.map */

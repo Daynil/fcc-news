@@ -4,10 +4,21 @@
 		<h3>Camper News</h3>
 	</div>
 	
+	<div id="sortby">
+		<p>Sort By:</p>
+		<select id="sort" #sortby (change)="sortNews(sortby)">
+			<option value="default" selected></option>
+			<option value="date">Date Posted</option>
+			<option value="upvotes">Upvotes</option>
+			<option value="poster">Poster</option>
+		</select>
+	</div>
+	
 	<div id="article-list">
 		<fcc-article
-			*ng-for="#article of articles"
-			[article]="article">
+			*ng-for="#article of articleService.articles"
+			[article]="article"
+			(click)="debug(article)">
 		</fcc-article>
 	</div>
 	

@@ -23,10 +23,6 @@ class BaseComponent {
 	sortNews(sortby) {
 		this.articleService.sortNews(sortby.value);
 	}
-	
-	debug(article: Article) {
-		console.log(article);
-	}
 }
 
 bootstrap(BaseComponent, [HTTP_PROVIDERS])

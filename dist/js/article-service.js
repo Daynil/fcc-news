@@ -8,7 +8,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var http_1 = require('angular2/http');
-var angular2_1 = require('angular2/angular2');
+var Observable_1 = require('rxjs/Observable');
+require('rxjs/add/operator/map');
 var core_1 = require('angular2/core');
 var Article = (function () {
     function Article(headline, timePosted, link) {
@@ -25,6 +26,7 @@ var ArticleService = (function () {
         this.apiEndpoint = 'http://www.freecodecamp.com/news/hot';
         this.articles = [];
         this.MAX_IMAGE_WID = 240;
+        this.MIN_IMAGE_WID = 200;
         this.initialGet();
     }
     ArticleService.prototype.getArticles = function () {
@@ -39,14 +41,17 @@ var ArticleService = (function () {
                 article.description = resArticle.metaDescription;
                 article.upvotes = resArticle.rank;
                 article.author = { userName: resArticle.author.username, userImage: resArticle.author.picture };
-                if (resArticle.image)
+                if (resArticle.image && resArticle.image != 'https://s0.wp.com/i/blank.jpg') {
                     article.storyImageUrl = resArticle.image;
+                }
                 else
                     article.storyImageUrl = article.author.userImage;
                 _this.getWidth(article.storyImageUrl)
                     .subscribe(function (width) {
                     if (width > _this.MAX_IMAGE_WID)
                         article.width = _this.MAX_IMAGE_WID;
+                    else if (width < _this.MIN_IMAGE_WID)
+                        article.width = _this.MIN_IMAGE_WID;
                     else
                         article.width = width;
                     _this.articles.push(article);
@@ -55,7 +60,7 @@ var ArticleService = (function () {
         });
     };
     ArticleService.prototype.getWidth = function (url) {
-        return new angular2_1.Observable(function (observer) {
+        return new Observable_1.Observable(function (observer) {
             var img = new Image();
             img.src = url;
             img.onload = function () {

@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var angular2_1 = require('angular2/angular2');
+var core_1 = require('angular2/core');
 var ArticleComp = (function () {
     function ArticleComp() {
     }
@@ -15,11 +15,11 @@ var ArticleComp = (function () {
         return "http://www.freecodecamp.com/" + this.article.author.userName;
     };
     ArticleComp = __decorate([
-        angular2_1.Component({
+        core_1.Component({
             selector: 'fcc-article',
             inputs: ['article']
         }),
-        angular2_1.View({
+        core_1.View({
             templateUrl: '../html/fcc-article.html',
             styleUrls: ['../css/fcc-article.css']
         }), 

@@ -1,7 +1,7 @@
 <html>
     <head>
         <Title>FCC News</Title>
-		<meta name="viewport" content="width=device-width, initial scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Fonts -->
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 		<!-- Libraries -->
@@ -9,7 +9,10 @@
         <script src="https://code.angularjs.org/tools/system.js"></script>
         <script>
             System.config({
-                defaultJSExtensions: true
+                defaultJSExtensions: true,
+				map: {
+					'rxjs': 'node_modules/rxjs'
+				}
             })
         </script>
         <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>

@@ -1,5 +1,6 @@
 import { Http, HTTP_PROVIDERS } from 'angular2/http';
-import { Observable } from 'angular2/angular2';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 import { Injectable } from 'angular2/core';
 
 export class Article {
@@ -18,6 +19,7 @@ export class ArticleService {
 	articles: Article[] = [];
 	
 	MAX_IMAGE_WID = 240;
+	MIN_IMAGE_WID = 200;
 	
 	constructor( public http: Http ) {
 		this.initialGet();
@@ -37,11 +39,14 @@ export class ArticleService {
 							article.description = resArticle.metaDescription;
 							article.upvotes = resArticle.rank;
 							article.author = { userName : resArticle.author.username, userImage : resArticle.author.picture };
-							if (resArticle.image) article.storyImageUrl = resArticle.image;
+							if (resArticle.image && resArticle.image != 'https://s0.wp.com/i/blank.jpg') {
+								article.storyImageUrl = resArticle.image;	
+							}
 							else article.storyImageUrl = article.author.userImage;
 							this.getWidth(article.storyImageUrl)
 								.subscribe( width => {
 									if (width > this.MAX_IMAGE_WID) article.width = this.MAX_IMAGE_WID;
+									else if (width < this.MIN_IMAGE_WID) article.width = this.MIN_IMAGE_WID;
 									else article.width = width;
 									this.articles.push(article);
 								});

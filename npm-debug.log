@@ -1,0 +1,116 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.14.3
+3 info using node@v4.1.0
+4 verbose readDependencies loading dependencies from C:\Coding\Web Dev\Practice\fcc-news\package.json
+5 warn package.json fcc-news@1.0.0 No description
+6 warn package.json fcc-news@1.0.0 No repository field.
+7 warn package.json fcc-news@1.0.0 No README data
+8 verbose install where, deps [ 'C:\\Coding\\Web Dev\\Practice\\fcc-news',
+8 verbose install   [ 'angular2',
+8 verbose install     'es6-promise',
+8 verbose install     'es6-shim',
+8 verbose install     'reflect-metadata',
+8 verbose install     'rxjs',
+8 verbose install     'zone.js',
+8 verbose install     'browser-sync',
+8 verbose install     'gulp',
+8 verbose install     'gulp-jasmine',
+8 verbose install     'gulp-sass',
+8 verbose install     'gulp-sourcemaps',
+8 verbose install     'gulp-typescript',
+8 verbose install     'jasmine-core' ] ]
+9 verbose install where, peers [ 'C:\\Coding\\Web Dev\\Practice\\fcc-news', [] ]
+10 verbose installManyTop reading for lifecycle C:\Coding\Web Dev\Practice\fcc-news\package.json
+11 info preinstall fcc-news@1.0.0
+12 verbose installManyTop reading scoped package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\angular2\package.json
+13 verbose installManyTop reading scoped package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\browser-sync\package.json
+14 verbose installManyTop reading scoped package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\es6-promise\package.json
+15 verbose installManyTop reading scoped package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\es6-shim\package.json
+16 verbose installManyTop reading scoped package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\gulp\package.json
+17 verbose installManyTop reading scoped package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\gulp-jasmine\package.json
+18 verbose installManyTop reading scoped package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\gulp-sass\package.json
+19 verbose installManyTop reading scoped package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\gulp-sourcemaps\package.json
+20 verbose installManyTop reading scoped package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\gulp-typescript\package.json
+21 verbose installManyTop reading scoped package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\jasmine-core\package.json
+22 verbose installManyTop reading scoped package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\reflect-metadata\package.json
+23 verbose installManyTop reading scoped package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\rxjs\package.json
+24 verbose installManyTop reading scoped package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\zone.js\package.json
+25 verbose readDependencies loading dependencies from C:\Coding\Web Dev\Practice\fcc-news\package.json
+26 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\angular2\package.json
+27 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\browser-sync\package.json
+28 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\es6-promise\package.json
+29 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\es6-shim\package.json
+30 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\gulp\package.json
+31 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\gulp-jasmine\package.json
+32 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\gulp-sass\package.json
+33 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\gulp-sourcemaps\package.json
+34 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\gulp-typescript\package.json
+35 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\jasmine-core\package.json
+36 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\reflect-metadata\package.json
+37 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\rxjs\package.json
+38 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\zone.js\package.json
+39 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\.bin\browser-sync\package.json
+40 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\.bin\browser-sync.cmd\package.json
+41 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\.bin\gulp\package.json
+42 verbose targetResolver reading package data from C:\Coding\Web Dev\Practice\fcc-news\node_modules\.bin\gulp.cmd\package.json
+43 verbose already installed skipping reflect-metadata@0.1.2 C:\Coding\Web Dev\Practice\fcc-news
+44 verbose already installed skipping rxjs@^5.0.0-alpha.14 C:\Coding\Web Dev\Practice\fcc-news
+45 verbose already installed skipping zone.js@^0.5.8 C:\Coding\Web Dev\Practice\fcc-news
+46 verbose already installed skipping browser-sync@^2.9.10 C:\Coding\Web Dev\Practice\fcc-news
+47 verbose already installed skipping gulp@^3.9.0 C:\Coding\Web Dev\Practice\fcc-news
+48 verbose already installed skipping gulp-jasmine@^2.2.1 C:\Coding\Web Dev\Practice\fcc-news
+49 verbose already installed skipping gulp-sass@^2.1.0 C:\Coding\Web Dev\Practice\fcc-news
+50 verbose already installed skipping gulp-sourcemaps@^1.6.0 C:\Coding\Web Dev\Practice\fcc-news
+51 verbose already installed skipping gulp-typescript@^2.9.2 C:\Coding\Web Dev\Practice\fcc-news
+52 verbose already installed skipping jasmine-core@^2.3.4 C:\Coding\Web Dev\Practice\fcc-news
+53 verbose already installed skipping angular2@^2.0.0-alpha.53 C:\Coding\Web Dev\Practice\fcc-news
+54 verbose already installed skipping es6-promise@^3.0.2 C:\Coding\Web Dev\Practice\fcc-news
+55 verbose already installed skipping es6-shim@^0.33.3 C:\Coding\Web Dev\Practice\fcc-news
+56 silly install resolved []
+57 info build C:\Coding\Web Dev\Practice\fcc-news
+58 info linkStuff fcc-news@1.0.0
+59 silly linkStuff fcc-news@1.0.0 has C:\Coding\Web Dev\Practice as its parent node_modules
+60 verbose linkBins fcc-news@1.0.0
+61 verbose linkMans fcc-news@1.0.0
+62 verbose rebuildBundles fcc-news@1.0.0
+63 verbose rebuildBundles [ '.bin',
+63 verbose rebuildBundles   'angular2',
+63 verbose rebuildBundles   'browser-sync',
+63 verbose rebuildBundles   'es6-promise',
+63 verbose rebuildBundles   'es6-shim',
+63 verbose rebuildBundles   'gulp',
+63 verbose rebuildBundles   'gulp-jasmine',
+63 verbose rebuildBundles   'gulp-sass',
+63 verbose rebuildBundles   'gulp-sourcemaps',
+63 verbose rebuildBundles   'gulp-typescript',
+63 verbose rebuildBundles   'jasmine-core',
+63 verbose rebuildBundles   'reflect-metadata',
+63 verbose rebuildBundles   'rxjs',
+63 verbose rebuildBundles   'zone.js' ]
+64 info install fcc-news@1.0.0
+65 info postinstall fcc-news@1.0.0
+66 info prepublish fcc-news@1.0.0
+67 verbose validateInstall loading C:\Coding\Web Dev\Practice\fcc-news\package.json for validation
+68 verbose stack Error: The package zone.js@0.5.10 does not satisfy its siblings' peerDependencies requirements!
+68 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install.js:125:32
+68 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install.js:268:7
+68 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:142:5
+68 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+68 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+68 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+68 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+68 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+68 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+68 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+69 verbose cwd C:\Coding\Web Dev\Practice\fcc-news
+70 error Windows_NT 10.0.10240
+71 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+72 error node v4.1.0
+73 error npm  v2.14.3
+74 error code EPEERINVALID
+75 error peerinvalid The package zone.js@0.5.10 does not satisfy its siblings' peerDependencies requirements!
+75 error peerinvalid Peer angular2@2.0.0-alpha.53 wants zone.js@0.5.8
+76 verbose exit [ 1, true ]

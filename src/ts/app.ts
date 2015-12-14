@@ -1,4 +1,6 @@
-import { Component, View, CORE_DIRECTIVES, bootstrap } from 'angular2/angular2';
+import { bootstrap } from 'angular2/platform/browser'
+import { Component, View } from 'angular2/core';
+import { CORE_DIRECTIVES } from 'angular2/common';
 import { HTTP_PROVIDERS } from 'angular2/http';
 import { ArticleComp } from './fcc-article';
 import { Article, ArticleService } from './article-service';

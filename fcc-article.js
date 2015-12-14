@@ -20,8 +20,8 @@ var ArticleComp = (function () {
             inputs: ['article']
         }),
         core_1.View({
-            templateUrl: '../html/fcc-article.html',
-            styleUrls: ['../css/fcc-article.css']
+            templateUrl: './fcc-article.html',
+            styleUrls: ['./fcc-article.css']
         }), 
         __metadata('design:paramtypes', [])
     ], ArticleComp);

@@ -27,8 +27,8 @@ var BaseComponent = (function () {
             viewBindings: [article_service_1.ArticleService]
         }),
         core_1.View({
-            templateUrl: '../html/fcc-news.html',
-            styleUrls: ['../css/fcc-news.css'],
+            templateUrl: './fcc-news.html',
+            styleUrls: ['./fcc-news.css'],
             directives: [common_1.CORE_DIRECTIVES, fcc_article_1.ArticleComp]
         }), 
         __metadata('design:paramtypes', [article_service_1.ArticleService])
